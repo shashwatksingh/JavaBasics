@@ -20,7 +20,8 @@ public class Student {
     long phone = 945_6647_895L; //L cannot be assigned to any other integer types. Long only to long
     /*int x;
     x=10; //this declaration is not possible in java*/
-    
+    float gpa = 3.8e4f; // f is mandatory with float but optional with double datatype
+    //scientific notation e is 10 to the power of trailing number
     public static void main(String[] args){
         Student s = new Student();
         s.compute();
@@ -38,5 +39,6 @@ public class Student {
         System.out.println("Age is " +age);
         System.out.println("Rank is" +rank);
         System.out.println("Phone is " +phone);
+        System.out.println("Gpa is " +gpa);
     }    
 }
