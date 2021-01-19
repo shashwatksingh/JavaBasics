@@ -29,7 +29,6 @@ public class Student {
         int maxValue = Integer.MAX_VALUE;
         System.out.println("Min" + minValue+" Max " +maxValue);
     }
-
     void compute(){
         //id = ""; statically bind language
         //these local variables are compulsory to initialize
