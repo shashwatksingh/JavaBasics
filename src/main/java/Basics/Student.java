@@ -22,6 +22,15 @@ public class Student {
     x=10; //this declaration is not possible in java*/
     float gpa = 3.8e4f; // f is mandatory with float but optional with double datatype
     //scientific notation e is 10 to the power of trailing number
+    
+    
+    
+    
+    
+    //char is represented as 16-bit signed integer in java
+    //char is represented as \u0042 where /*backslash u*/ is escape sequence and 0042 is hexadecimal representation
+    char degree ='B'; //of it can be represented in hexadecimal unicode \u0042
+    //char also has boxed primitive    
     public static void main(String[] args){
         Student s = new Student();
         s.compute();
@@ -40,5 +49,6 @@ public class Student {
         System.out.println("Rank is" +rank);
         System.out.println("Phone is " +phone);
         System.out.println("Gpa is " +gpa);
+        System.out.println("Degree is "+degree);
     }    
 }

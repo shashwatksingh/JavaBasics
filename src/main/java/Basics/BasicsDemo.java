@@ -55,7 +55,7 @@ public class BasicsDemo {
         //Problem is that these numbers don't have a denominator of 2
         //0.5 can be accurately represented
         
-        //way around this predicament is using BigDecimal class
+        //way around this predicament is using BigDecimal class. But it's a little slow. 
         BigDecimal first = new BigDecimal("0.1");
         BigDecimal second = new BigDecimal("0.2");
         System.out.println(first.add(second));
