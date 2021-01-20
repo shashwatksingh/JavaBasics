@@ -23,14 +23,15 @@ public class Student {
     float gpa = 3.8e4f; // f is mandatory with float but optional with double datatype
     //scientific notation e is 10 to the power of trailing number
     
-    
-    
-    
-    
+    //declaring boolean variable to check if the student is international
+    //Extra fee if the student is international    
+    boolean international = true;
+    double tuitionFees = 12000;
+    double internationalTuitionFees = 5000;
     //char is represented as 16-bit signed integer in java
     //char is represented as \u0042 where /*backslash u*/ is escape sequence and 0042 is hexadecimal representation
     char degree ='B'; //of it can be represented in hexadecimal unicode \u0042
-    //char also has boxed primitive    
+    //char also has boxed primitive. It has a range of \u0000 to \uFFFF    
     public static void main(String[] args){
         Student s = new Student();
         s.compute();
@@ -50,5 +51,9 @@ public class Student {
         System.out.println("Phone is " +phone);
         System.out.println("Gpa is " +gpa);
         System.out.println("Degree is "+degree);
+        if(international == true){
+            tuitionFees+= internationalTuitionFees;
+        }
+        System.out.println("Tutition fee"+ tuitionFees);
     }    
 }

@@ -35,8 +35,20 @@ public class BasicsDemo {
         int intBinary = 0b1000_001; //only in Java7 and above. 
         System.out.println("intBin " + intBinary); 
         //octal number starts with 0. Though octal notation is rarely used
+        //Representing character in integer, hexadecimal and binary.
+        //But because the range of character is from 0 to 65535. Therefore, negative value cannot be assigned
         int intOctal = 0101;
-        System.out.println("intOtcal " + intOctal);
+        System.out.println("intOctal " + intOctal);
+        char charInt = 65;
+        System.out.println("Character in int "+charInt);
+        char charHex = 0x0041;
+        System.out.println("Character in hex "+charHex);
+        char charBinary = 0b0100_0001;
+        System.out.println("Character in binary "+charBinary);
+        
+        //using char to initialize int variable
+        int intChar = 'a';
+        System.out.println("Integer initialised to character has value: "+intChar);
     }
     static void floatPoint(){
         //float can store 6-7 decimal digits-3.4E38 to 3.4E8 
