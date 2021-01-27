@@ -12,7 +12,7 @@ package Basics;
 public class Studentoptimized {
     //This class is an optimized version of Student.java.
     //Here, I'll be following a general/preferred way to use java classes, variables and methods
-    
+    // Instance and static variables are also referred to as fields or attributes. Attributes are probably more commonly associated with instance variables.
     
     
     //It is preferred to stick to int and double until and unless necessarily required
@@ -20,20 +20,25 @@ public class Studentoptimized {
     int id ;
     String name;
     String gender;
-    //atlternate way declaring variables
+    //same copy accessed by all the objects. accessed by class reference. 
+    //They can only be read in a class scope. Only one copy is created for the whole class
+    //Can be accessed outside the class using class name or the object name
+    //you can also use object reference to access this, but, it is not preferred 
     static int ctr;
     int age;
     short rank;    
     long phone;
     float gpa; 
     boolean international;
-    double tuitionFees = 12000;
-    double internationalTuitionFees = 5000;  
+    //Multivariable declaration. Only same type can be done this way. They will get default values as earlier. The rule is that you can define the datatype only once.
+    //you can also do double tuitionFees = 12000, internationalTuitionFees= tuitionFees + 5000;
+    //or you can also do tuitionFees = internationalTuitionFees = 5000;
+    double tuitionFees = 12000, internationalTuitionFees = 5000;  
     char degree;  
     public static void main(String[] args){
         //We will give two state to the same class and implement object calling.
         //Both states are independent of each other
-        
+        //args is also a local variable
         Studentoptimized student1 = new Studentoptimized();
         //initializing state for student 1
         student1.id = 1000+ctr;
@@ -60,6 +65,9 @@ public class Studentoptimized {
         student2.compute();
     }
     void compute(){
+        //These are called local variables
+        //Local variables must be initialized before being used. Local variables do not get a default values.
+        int next =id+1;
         System.out.println("\n" +id);
         System.out.println("Name: " +name);
         System.out.println("Gender: " +gender);
