@@ -101,13 +101,63 @@ public class BasicsDemo {
 	  cChar = (char)bByte; // special conversion (widening from byte --> int followed by narrowing from int --> char)
 	  System.out.println("cChar: " + cChar);
     }
-    static int count =25;
+    static int count =25; //declaration statements are allowed
+    //count =34; you cannot have expression statements in the class scope
+    //if- else ; control flow is not allowed in the class scope
+    //use contructors and methods for the above two types
+    static void arrays(){
+        //Three ways to invoke an array
+        System.out.println("\nInside arrays");
+        //First way
+        /*int []scores =new int[4]; //size is defined at the time of array declaration and cannot be changes later
+        scores[0]=90; 
+        scores[1]=70; 
+        scores[2]=80; 
+        scores[3]=100; 
+        */
+        //Second way to declare arrays
+        //int [] scores = new int[] {90,70,80,100};
+        //The size of the array is implicitly inferred. Do not declare the array size
+        
+        
+        //Third way to declare arrays
+        int [] scores = {90,70,80,100};//this syntax is only possible in the declaration
+        System.out.println("Mid-term 1 :" +scores[0]);
+        System.out.println("Mid-term 2 :" +scores[1]);
+        System.out.println("Final :" +scores[2]);
+        System.out.println("Project :" +scores[3]);
+        System.out.println("Number of exams: " + scores.length);       
+        
+        //Since the array is an object reference. Without declaring it will give a null pointer exception
+        
+        /*Student [] students = new Student[3];
+        students[0] = new Student();
+        students[1] = new Student();
+        students[2] = new Student();*/
+        
+        
+        
+        //Second type of declaration
+        //Student [] students = new Student[] {new Student(), new Student(), new Student()};
+        
+        
+        //Third type of declaration
+        Student [] students = {new Student(), new Student(), new Student()};
+        students[0].name = "John";
+        students[1].name = "Jack";
+        students[2].name = "Jill";
+        System.out.println("Student 1 :" +students[0].name);
+        System.out.println("Student 2 :" +students[1].name);
+        System.out.println("Student 3 :" +students[2].name);
+    
+    }
     public static void main(String[] args){
         //Language basics
         print();
         primitives();
         floatPoint();
         typeCasting();
+        arrays();
     }
     
 }

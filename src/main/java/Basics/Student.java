@@ -14,6 +14,7 @@ public class Student {
     //default value of int will be 0. If the variable is undeclared, the default value is updates to the variable
     //Integer literals : int literals, long literal
     int id = 1000;
+    String name;
     byte age = 18; //[-128,127] Possible lossy conversion from x to y if not coming inside the variable
     short rank = 10123;
     //_ can be used to increase the readability. This facility is Java7 and above. Cannot be used in integer literals
