@@ -149,8 +149,40 @@ public class BasicsDemo {
         System.out.println("Student 1 :" +students[0].name);
         System.out.println("Student 2 :" +students[1].name);
         System.out.println("Student 3 :" +students[2].name);
-    
+        //arrays are internally represented as int arr[row's] = new int[column's]
+        //2-D arrays are used to represent the matrices. The arrays above the order of 2 are really rare to find.
     }
+    static void threeDimensionalArrays() {
+	   System.out.println("\nInside threeDimensionalArrays ...");
+	   int[][][] unitsSold = new int[][][]{ 
+										   { // New York
+											 {0,0,0,0}, // Jan
+											 {0,0,0,0}, // Feb
+											 {0,0,0,0}, // Mar
+											 {0,850,0,0}// Apr	
+										   },
+										   { // San Francisco
+											 {0,0,0,0}, // Jan
+											 {0,0,0,0}, // Feb
+											 {0,0,0,0}, // Mar
+											 {0,0,0,0}  // Apr
+										   },
+										   { 
+											 {0,0,0,0},
+											 {0,0,0,0},
+											 {0,0,0,0},
+											 {0,0,0,0}
+										   },
+										   {
+											 {0,0,0,0},
+											 {0,0,0,0},
+											 {0,0,0,0},
+											 {0,0,0,0}
+										   }
+										 };
+		                    	 
+		System.out.println("unitsSold[0][3][1]: " + unitsSold[0][3][1]);
+	}
     public static void main(String[] args){
         //Language basics
         print();
@@ -158,6 +190,7 @@ public class BasicsDemo {
         floatPoint();
         typeCasting();
         arrays();
+        threeDimensionalArrays();
     }
     
 }
