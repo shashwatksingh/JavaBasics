@@ -153,6 +153,7 @@ public class BasicsDemo {
         //2-D arrays are used to represent the matrices. The arrays above the order of 2 are really rare to find.
     }
     static void threeDimensionalArrays() {
+        //by specifying void, it has no return
 	   System.out.println("\nInside threeDimensionalArrays ...");
 	   int[][][] unitsSold = new int[][][]{ 
 										   { // New York
@@ -183,14 +184,45 @@ public class BasicsDemo {
 		                    	 
 		System.out.println("unitsSold[0][3][1]: " + unitsSold[0][3][1]);
 	}
+    //methods represent logic.datatypes represent state.
+    /*methodSpecifier returnType methodName (type param1, type param2,..parameters/formal parameters.){
+        method SIGNATURE is only methodName (type param1, type param2,...) 
+    return someValue;
+    //return value can be either primitive type or objects/reference. Optional return if returnType is void.
+    }
+    type var = methodName(arg1, arg2, ...method arguments/actual parameters...);
+    methods parameter must have SAME dataype and the values will be assigned in the SAME order
+    */
+    static double sum ( double x, double y){
+       return (float)(x+y);
+       //unnecessary type casting but this is possible because it will again be converted to double again implicitly
+    }
+    static double average ( double x, double y){
+        double s = sum(x,y); //method reusability and avoid duplication
+        return s/2;
+       //unnecessary type casting but this is possible because it will again be converted to double again implicitly
+    }
+    static boolean search(int[] list, int key){
+        boolean r = false;
+        for(int i=0;i<list.length; i++)
+            if(list[i]==key)
+                r = true;
+        return r;
+    }
     public static void main(String[] args){
         //Language basics
-        print();
+        /*print();
         primitives();
         floatPoint();
         typeCasting();
         arrays();
-        threeDimensionalArrays();
+        threeDimensionalArrays();*/
+        double d = sum(3.0, 2.0);
+        System.out.println(d);
+        double d2 = average(3.0, 2.0);
+        System.out.println(d2);
+        int[] list = {1, 5};
+        System.out.println(search(new int[]{1,2,3}, 2));//one more way to add list as parameter but only as declaration statements
     }
     
 }
