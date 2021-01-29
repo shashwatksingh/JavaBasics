@@ -209,6 +209,20 @@ public class BasicsDemo {
                 r = true;
         return r;
     }
+    /*Two types of methods are static methods or instance methods. 
+        Static methods are class level methods. No access to state of other methods(instance varaibles/methods).
+        They mostly serve as utility methods for testing and other things.
+        can access static variables and other static variables.
+        can we invoked className.methodName()
+        main method is static
+    
+    
+    
+        We have used a lot of static method till now.
+        But now, the instance methods represent the behaviour of the class. 
+        They are invoked using objectReference.methodName();
+        They usually manipulate and perform operation on instance variables.
+        It can affect other instance methods for code reusability.*/
     public static void main(String[] args){
         //Language basics
         /*print();
