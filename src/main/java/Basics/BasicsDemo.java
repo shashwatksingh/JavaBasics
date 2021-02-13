@@ -223,6 +223,12 @@ public class BasicsDemo {
         They are invoked using objectReference.methodName();
         They usually manipulate and perform operation on instance variables.
         It can affect other instance methods for code reusability.*/
+    
+    static void go(int[] array){
+        System.out.println("array[0]: "+array[0]);
+        System.out.println("array[1]: "+array[1]);
+        array[1] = 22;
+    }
     public static void main(String[] args){
         //Language basics
         /*print();
@@ -237,6 +243,9 @@ public class BasicsDemo {
         System.out.println(d2);
         int[] list = {1, 5};
         System.out.println(search(new int[]{1,2,3}, 2));//one more way to add list as parameter but only as declaration statements
+        int[] array = {1,2};
+        go(array);
+        System.out.println("array[1]: "+array[1]);
     }
     
 }

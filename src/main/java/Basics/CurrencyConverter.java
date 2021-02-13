@@ -15,6 +15,9 @@ public class CurrencyConverter {
     public static void main(String[] args){
         CurrencyConverter cc = new CurrencyConverter();
         cc.printCurrencies();
+        double amount = cc.computeTransferAmount(0, 1000);
+        
+        /*static methods is accessed globally even by instance methods. But the instance variables and methods cannot be accessed by */
     }
     public CurrencyConverter(){
         array = new double[7];
@@ -29,13 +32,16 @@ public class CurrencyConverter {
         dollar = 1;*/
     }
     void updateExchangeRate(int arrayIndex, double newVal){
-        exchangeRates[arrayIndex] = newVal;
+        //update the value of the conversion rates
+        array[arrayIndex] = newVal;
     }
-    void getExchangeRates(int arrayIndex){
-        return exchangeRates[arrayindex];
+    double getExchangeRates(int arrayIndex){
+        // get the exchange rates for the day
+        return array[arrayIndex];
     }
     double computeTransferAmount(int arrayIndex, double amount){
-        return amount * getExchangeRates(arrayIndex);
+        //invoking other instance variable with this instance variables
+        return (amount * getExchangeRates(arrayIndex));
     }
     void printCurrencies(){
         System.out.println("rupee: "+array[0]);
