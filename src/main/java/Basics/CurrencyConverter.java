@@ -28,6 +28,15 @@ public class CurrencyConverter {
         /*Rupee = 63;
         dollar = 1;*/
     }
+    void updateExchangeRate(int arrayIndex, double newVal){
+        exchangeRates[arrayIndex] = newVal;
+    }
+    void getExchangeRates(int arrayIndex){
+        return exchangeRates[arrayindex];
+    }
+    double computeTransferAmount(int arrayIndex, double amount){
+        return amount * getExchangeRates(arrayIndex);
+    }
     void printCurrencies(){
         System.out.println("rupee: "+array[0]);
         System.out.println("dirham: "+ array[1]);
