@@ -55,6 +55,6 @@ public class Student {
         if(international == true){
             tuitionFees+= internationalTuitionFees;
         }
-        System.out.println("Tutition fee"+ tuitionFees);
+        System.out.println("Tuition fee "+ tuitionFees);
     }    
 }
