@@ -104,7 +104,7 @@ public class BasicsDemo {
     static int count =25; //declaration statements are allowed
     //count =34; you cannot have expression statements in the class scope
     //if- else ; control flow is not allowed in the class scope
-    //use contructors and methods for the above two types
+    //use constructors and methods for the above two types
     static void arrays(){
         //Three ways to invoke an array
         System.out.println("\nInside arrays");

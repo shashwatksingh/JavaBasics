@@ -16,6 +16,7 @@ public class CurrencyConverter {
         CurrencyConverter cc = new CurrencyConverter();
         cc.printCurrencies();
         double amount = cc.computeTransferAmount(0, 1000);
+        System.out.println("Converted amount is: " + amount);
         
         /*static methods is accessed globally even by instance methods. But the instance variables and methods cannot be accessed by */
     }
